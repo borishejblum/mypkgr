@@ -21,8 +21,8 @@ The goal of mypkgr is to test test test
 You can install mypkgr from github with:
 
 ```{r gh-installation, eval = FALSE}
-# install.packages("devtools")
-devtools::install_github("Antho3533/mypkgr")
+# install.packages("remotes")
+remotes::install_github("borishejblum/mypkgr")
 ```
 
 ## Example

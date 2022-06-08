@@ -1,22 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-mypkgr
-======
+
+# mypkgr
 
 The goal of mypkgr is to test test test
 
-Installation
-------------
+## Installation
 
 You can install mypkgr from github with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("Antho3533/mypkgr")
+# install.packages("remotes")
+remotes::install_github("borishejblum/mypkgr")
 ```
 
-Example
--------
+## Example
 
 This is a basic example which shows you how to solve a common problem:
 

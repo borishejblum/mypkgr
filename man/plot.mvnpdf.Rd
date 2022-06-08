@@ -2,7 +2,7 @@
 % Please edit documentation in R/mvnpdf.R
 \name{plot.mvnpdf}
 \alias{plot.mvnpdf}
-\title{Plot of the mvnpdf function}
+\title{Plot of the mvnpdf function on the first dimension}
 \usage{
 \method{plot}{mvnpdf}(x, ...)
 }
@@ -16,7 +16,7 @@
 Nothing is returned, only a plot is given.
 }
 \description{
-Plot of the mvnpdf function
+Plot of the mvnpdf function on the first dimension
 }
 \examples{
 pdfvalues <- mvnpdf(x=matrix(seq(-3, 3, by = 0.1), nrow = 1), Log=FALSE)

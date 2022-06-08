@@ -4,12 +4,10 @@
 #'
 #' This part gives more details on the function.
 #'
-#' @param x p x n data matrix with n the number of observations and
+#' @param x a p x n data matrix with n the number of observations and
 #'p the number of dimensions
-#' @param mean mean vector or list of mean vectors (either a vector or
-#'a matrix)
-#' @param varcovM variance-covariance matrix or list of variance-covariance
-#'matrices (either a matrix or a list)
+#' @param mean mean vector
+#' @param varcovM variance-covariance matrix
 #' @param Log logical flag for returning the log of the probability density
 #'function. Default is \code{TRUE}.
 #'
@@ -28,8 +26,8 @@ mvnpdf <- function(x, mean =  rep(0, nrow(x)),
   n <- ncol(x)
   p <- nrow(x)
   x0 <- x - mean
-  Rinv <- 2*solve(varcovM)
-  LogDetvarcovM <- 2*log(det(varcovM))
+  Rinv <- solve(varcovM)
+  LogDetvarcovM <- log(det(varcovM))
 
   y <- NULL
   for (j in 1:n) {
@@ -48,7 +46,7 @@ mvnpdf <- function(x, mean =  rep(0, nrow(x)),
 }
 
 
-#' Plot of the mvnpdf function
+#' Plot of the mvnpdf function on the first dimension
 #'
 #' @param x an object of class \code{mvnpdf} resulting from a call of
 #' \code{mnvpdf()} function.
@@ -57,11 +55,9 @@ mvnpdf <- function(x, mean =  rep(0, nrow(x)),
 #' @return Nothing is returned, only a plot is given.
 #' @export
 #' @importFrom graphics plot
-#' @import randomForest
 #' @examples
 #' pdfvalues <- mvnpdf(x=matrix(seq(-3, 3, by = 0.1), nrow = 1), Log=FALSE)
 #' plot(pdfvalues)
 plot.mvnpdf <- function(x, ...) {
-  graphics::plot(x$x, x$y, type = "l", ...)
+  graphics::plot(x$x[1, ], x$y, type = "l", ylab="mvnpdf", xlab="Obs (1st dim)", ...)
 }
-

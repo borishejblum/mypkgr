@@ -1,14 +1,18 @@
 Package: mypkgr
-Title: What the Package Does (one line, title case)
+Title: Example of a package for teaching HeavyR
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Authors@R: person("Boris", "Hejblum", email = "boris.hejblum@u-bordeaux.fr", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
-Depends: R (>= 3.4.3)
-License: What license is it under?
+Depends: R (>= 3.4.2)
+Imports: future, future.apply, itertools, Rcpp
+License: GPL (>= 3)
 Encoding: UTF-8
-LazyData: true
-RoxygenNote: 6.0.1
-Suggests: testthat,
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr
+RoxygenNote: 7.2.0
+Suggests: testthat, mvtnorm, covr, microbenchmark
+LinkingTo: Rcpp, RcppArmadillo
+URL: https://github.com/borishejblum/mypkgr
+BugReports: https://github.com/borishejblum/mypkgr/issues
+NeedsCompilation: yes
+Packaged: 2022-06-02 11:49:20 UTC; rg
+Author: Boris Hejblum [aut, cre]
+Maintainer: Boris Hejblum <boris.hejblum@u-bordeaux.fr>
