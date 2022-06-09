@@ -8,7 +8,8 @@
 [![R-CMD-check](https://github.com/borishejblum/mypkgr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/borishejblum/mypkgr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of mypkgr is to …
+`mypkgr` is a companion package to the [HeavyR
+course](https://heavyr.borishejblum.science).
 
 ## Installation
 
