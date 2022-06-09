@@ -22,9 +22,9 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// mvnpdfC
-NumericVector mvnpdfC(arma::mat x, arma::colvec mean, arma::mat varcovM, bool Log);
-RcppExport SEXP _mypkgr_mvnpdfC(SEXP xSEXP, SEXP meanSEXP, SEXP varcovMSEXP, SEXP LogSEXP) {
+// mvnpdfoptimC
+arma::vec mvnpdfoptimC(arma::mat x, arma::colvec mean, arma::mat varcovM, bool Log);
+RcppExport SEXP _mypkgr_mvnpdfoptimC(SEXP xSEXP, SEXP meanSEXP, SEXP varcovMSEXP, SEXP LogSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -32,7 +32,21 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::colvec >::type mean(meanSEXP);
     Rcpp::traits::input_parameter< arma::mat >::type varcovM(varcovMSEXP);
     Rcpp::traits::input_parameter< bool >::type Log(LogSEXP);
-    rcpp_result_gen = Rcpp::wrap(mvnpdfC(x, mean, varcovM, Log));
+    rcpp_result_gen = Rcpp::wrap(mvnpdfoptimC(x, mean, varcovM, Log));
+    return rcpp_result_gen;
+END_RCPP
+}
+// mvnpdfsmartC
+arma::vec mvnpdfsmartC(arma::mat x, arma::colvec mean, arma::mat varcovM, bool Log);
+RcppExport SEXP _mypkgr_mvnpdfsmartC(SEXP xSEXP, SEXP meanSEXP, SEXP varcovMSEXP, SEXP LogSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type x(xSEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type mean(meanSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type varcovM(varcovMSEXP);
+    Rcpp::traits::input_parameter< bool >::type Log(LogSEXP);
+    rcpp_result_gen = Rcpp::wrap(mvnpdfsmartC(x, mean, varcovM, Log));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -50,7 +64,8 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_mypkgr_invC", (DL_FUNC) &_mypkgr_invC, 1},
-    {"_mypkgr_mvnpdfC", (DL_FUNC) &_mypkgr_mvnpdfC, 4},
+    {"_mypkgr_mvnpdfoptimC", (DL_FUNC) &_mypkgr_mvnpdfoptimC, 4},
+    {"_mypkgr_mvnpdfsmartC", (DL_FUNC) &_mypkgr_mvnpdfsmartC, 4},
     {"_mypkgr_timesTwo", (DL_FUNC) &_mypkgr_timesTwo, 1},
     {NULL, NULL, 0}
 };

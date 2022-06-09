@@ -5,7 +5,7 @@
 #'
 #'@param A a matrix
 #'
-#'
+#'@export
 invC <- function(A) {
     .Call(`_mypkgr_invC`, A)
 }
@@ -17,8 +17,14 @@ invC <- function(A) {
 #'@rdname mvnpdf
 #'@export
 #'
-mvnpdfC <- function(x, mean, varcovM, Log = TRUE) {
-    .Call(`_mypkgr_mvnpdfC`, x, mean, varcovM, Log)
+mvnpdfoptimC <- function(x, mean, varcovM, Log = TRUE) {
+    .Call(`_mypkgr_mvnpdfoptimC`, x, mean, varcovM, Log)
+}
+
+#'@rdname mvnpdf
+#'@export
+mvnpdfsmartC <- function(x, mean, varcovM, Log = TRUE) {
+    .Call(`_mypkgr_mvnpdfsmartC`, x, mean, varcovM, Log)
 }
 
 #' Multiplies vector by 2
