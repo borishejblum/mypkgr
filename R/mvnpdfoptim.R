@@ -11,7 +11,7 @@ mvnpdfoptim <- function(x, mean =  rep(0, nrow(x)),
   p <- nrow(x)
   x0 <- x-mean
 
-  Rinv = backsolve(chol(varcovM), x=diag(p))
+  Rinv <- backsolve(chol(varcovM), x=diag(p))
   xRinv <- apply(X=x0, MARGIN=2, FUN=crossprod, y=Rinv)
   logSqrtDetvarcovM <- sum(log(diag(Rinv)))
 

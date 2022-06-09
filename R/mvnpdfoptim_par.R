@@ -24,7 +24,7 @@ mvnpdfoptim_par <- function(x, mean =  rep(0, nrow(x)), varcovM = diag(nrow(x)),
   p <- nrow(x)
   x0 <- x-mean
 
-  Rinv = backsolve(chol(varcovM), x=diag(p))
+  Rinv <- backsolve(chol(varcovM), x=diag(p))
 
   y_par <- future.apply::future_sapply(X = 1:p, FUN = function(i) {
     xRinv <- apply(X=x0[, i, drop=FALSE], MARGIN=2, FUN=crossprod, y=Rinv)
