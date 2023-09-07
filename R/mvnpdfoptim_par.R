@@ -1,6 +1,7 @@
 #' @rdname mvnpdf
 #' @importFrom future plan multisession availableCores
 #' @importFrom future.apply future_sapply
+#' @param ncores number of parallel cores to split task over when using itertools
 #' @export
 #' @examples
 #' \dontrun{

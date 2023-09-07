@@ -46,6 +46,8 @@ p the number of dimensions}
 
 \item{Log}{logical flag for returning the log of the probability density
 function. Default is \code{TRUE}.}
+
+\item{ncores}{number of parallel cores to split task over when using itertools}
 }
 \value{
 a list containing the input matrix x and y the multivariate-Normal probability density function
