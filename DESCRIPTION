@@ -7,7 +7,7 @@ Depends: R (>= 3.4.2)
 Imports: future, future.apply, itertools, Rcpp
 License: GPL (>= 3)
 Encoding: UTF-8
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 Suggests: testthat, mvtnorm, covr, microbenchmark
 LinkingTo: Rcpp, RcppArmadillo
 URL: https://github.com/borishejblum/mypkgr

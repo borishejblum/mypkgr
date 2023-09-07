@@ -8,6 +8,7 @@
 \alias{mvnpdf_invC}
 \alias{mvnpdfoptim}
 \alias{mvnpdfoptim_par}
+\alias{mvnpdfoptim_parIter}
 \alias{mvnpdfsmart}
 \title{Based on the implementation from Nino Hardt and Dicko Ahmadou
 http://gallery.rcpp.org/articles/dmvnorm_arma/
@@ -24,6 +25,14 @@ mvnpdf_invC(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 mvnpdfoptim(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
 mvnpdfoptim_par(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+
+mvnpdfoptim_parIter(
+  x,
+  mean = rep(0, nrow(x)),
+  varcovM = diag(nrow(x)),
+  Log = TRUE,
+  ncores = 1
+)
 
 mvnpdfsmart(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 }

@@ -43,9 +43,9 @@ mvnpdfoptim_par <- function(x, mean =  rep(0, nrow(x)), varcovM = diag(nrow(x)),
   return(res)
 }
 
-
+#' @rdname mvnpdf
 #' @importFrom itertools isplitIndices
-#'
+#' @export
 mvnpdfoptim_parIter <- function(x, mean =  rep(0, nrow(x)),
                                 varcovM = diag(nrow(x)), Log=TRUE, ncores = 1){
 
