@@ -10,7 +10,7 @@ Encoding: UTF-8
 RoxygenNote: 7.2.3
 Suggests: testthat, mvtnorm, covr, microbenchmark
 LinkingTo: Rcpp, RcppArmadillo
-URL: https://github.com/borishejblum/mypkgr
+URL: https://github.com/borishejblum/mypkgr, https://borishejblum.github.io/mypkgr/
 BugReports: https://github.com/borishejblum/mypkgr/issues
 NeedsCompilation: yes
 Packaged: 2022-06-02 11:49:20 UTC; rg
