@@ -2,6 +2,7 @@
 % Please edit documentation in R/mypkgr-package.r
 \docType{package}
 \name{mypkgr}
+\alias{mypkgr-package}
 \alias{mypkgr}
 \title{mypkgr.}
 \description{
@@ -11,4 +12,22 @@ This the place to speak about your package.
 What is in the package...
 
 What are the most important functions...
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/borishejblum/mypkgr}
+  \item \url{https://borishejblum.github.io/mypkgr/}
+  \item Report bugs at \url{https://github.com/borishejblum/mypkgr/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Boris Hejblum \email{boris.hejblum@u-bordeaux.fr}
+
+Authors:
+\itemize{
+  \item Robin Genuer \email{robin.genuer@u-bordeaux.fr}
+}
+
 }
