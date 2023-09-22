@@ -1,10 +1,19 @@
 Package: mypkgr
-Title: Example of a package for teaching HeavyR
+Title: Example Of A Package For Teaching HeavyR
 Version: 0.0.0.9000
-Authors@R: person("Boris", "Hejblum", email = "boris.hejblum@u-bordeaux.fr", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: c(person("Boris", "Hejblum", email = "boris.hejblum@u-bordeaux.fr", role = c("aut", "cre")),
+             person("Robin", "Genuer", email = "robin.genuer@u-bordeaux.fr", role = c("aut"))
+           )
+Description: A collection of function for computing the density for a 
+             multivariate Gaussian distibution. Several implementations are 
+             provided to examplify the different techniques for optimizing and 
+             accelerating R codes.
 Depends: R (>= 3.4.2)
-Imports: future, future.apply, itertools, Rcpp
+Imports: future, 
+         future.apply, 
+         itertools, 
+         Rcpp,
+         pbapply
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.2.3
@@ -13,6 +22,3 @@ LinkingTo: Rcpp, RcppArmadillo
 URL: https://github.com/borishejblum/mypkgr, https://borishejblum.github.io/mypkgr/
 BugReports: https://github.com/borishejblum/mypkgr/issues
 NeedsCompilation: yes
-Packaged: 2022-06-02 11:49:20 UTC; rg
-Author: Boris Hejblum [aut, cre]
-Maintainer: Boris Hejblum <boris.hejblum@u-bordeaux.fr>
