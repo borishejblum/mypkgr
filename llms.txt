@@ -1,7 +1,7 @@
 # mypkgr
 
-`mypkgr` is a companion package to the [HeavyR
-course](https://heavyr.borishejblum.science).
+`mypkgr` is a example companion package to the [endeavR
+course](https://endeavr.borishejblum.science).
 
 ## Installation
 
