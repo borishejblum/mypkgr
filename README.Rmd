@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/borishejblum/mypkgr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/borishejblum/mypkgr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-`mypkgr` is a companion package to the [HeavyR course](https://heavyr.borishejblum.science).
+`mypkgr` is a example companion package to the [endeavR course](https://endeavr.borishejblum.science).
 
 ## Installation
 
