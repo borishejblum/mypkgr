@@ -13,7 +13,7 @@ course](https://heavyr.borishejblum.science).
 
 ## Installation
 
-You can install `mypkgr` from [GitHub](https://github.com/) with:
+You can install `mypkgr` from [GitHub](https://github.com/) with
 
 ``` r
 # install.packages("remotes")
