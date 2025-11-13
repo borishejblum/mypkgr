@@ -1,4 +1,4 @@
-# mypkgr: Example Of A Package For Teaching HeavyR
+# mypkgr: Example Of A Package For Teaching The EndeavR Course
 
 A collection of function for computing the density for a multivariate
 Gaussian distibution. Several implementations are provided to examplify

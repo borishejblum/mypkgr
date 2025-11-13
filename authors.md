@@ -12,11 +12,11 @@ Source:
 [`DESCRIPTION`](https://github.com/borishejblum/mypkgr/blob/master/DESCRIPTION)
 
 Hejblum B, Genuer R (2025). *mypkgr: Example Of A Package For Teaching
-HeavyR*. R package version 0.0.0.9000,
+The EndeavR Course*. R package version 0.0.0.9000,
 <https://github.com/borishejblum/mypkgr>.
 
     @Manual{,
-      title = {mypkgr: Example Of A Package For Teaching HeavyR},
+      title = {mypkgr: Example Of A Package For Teaching The EndeavR Course},
       author = {Boris Hejblum and Robin Genuer},
       year = {2025},
       note = {R package version 0.0.0.9000},
