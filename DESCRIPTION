@@ -22,3 +22,4 @@ LinkingTo: Rcpp, RcppArmadillo
 URL: https://github.com/borishejblum/mypkgr, https://borishejblum.github.io/mypkgr/
 BugReports: https://github.com/borishejblum/mypkgr/issues
 NeedsCompilation: yes
+Roxygen: list(markdown = TRUE)

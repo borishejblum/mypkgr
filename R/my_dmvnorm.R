@@ -3,8 +3,8 @@
 #'@param x matrix
 #'@param mean vector
 #'@param sigma covariance matrix
-#'@param log logical. Default is \code{FALSE}
-#'@param checkSymmetry logical. Default is \code{TRUE}
+#'@param log logical. Default is `FALSE`
+#'@param checkSymmetry logical. Default is `TRUE`
 #'
 #'@export
 #'
