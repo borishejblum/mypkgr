@@ -35,9 +35,6 @@ remotes::install_github("borishejblum/mypkgr")
   2014)
 - [`my_dmvnorm()`](https://borishejblum.github.io/mypkgr/reference/my_dmvnorm.md)
   : Copy of mvtnorm::dmvnorm for progiling and reference
-- [`mypkgr-package`](https://borishejblum.github.io/mypkgr/reference/mypkgr.md)
-  [`mypkgr`](https://borishejblum.github.io/mypkgr/reference/mypkgr.md)
-  : mypkgr.
 - [`plot(`*`<mvnpdf>`*`)`](https://borishejblum.github.io/mypkgr/reference/plot.mvnpdf.md)
   : Plot of the mvnpdf function on the first dimension
 - [`timesTwo()`](https://borishejblum.github.io/mypkgr/reference/timesTwo.md)
