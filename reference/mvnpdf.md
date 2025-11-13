@@ -1,31 +1,23 @@
-# Based on the implementation from Nino Hardt and Dicko Ahmadou http://gallery.rcpp.org/articles/dmvnorm_arma/ (accessed in August 2014)
+# Multivariate-Normal probability density function
 
 This is a concise description of what the function does.
 
 ## Usage
 
 ``` r
-mvnpdfoptimC(x, mean, varcovM, Log = TRUE)
-
-mvnpdfsmartC(x, mean, varcovM, Log = TRUE)
-
 mvnpdf(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
-mvnpdf_invC(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+mvnpdfsmart(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
 mvnpdfoptim(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
-mvnpdfoptim_par(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+mvnpdf_invC(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
-mvnpdfoptim_parIter(
-  x,
-  mean = rep(0, nrow(x)),
-  varcovM = diag(nrow(x)),
-  Log = TRUE,
-  ncores = 1
-)
+mvnpdfsmartC(x, mean, varcovM, Log = TRUE)
 
-mvnpdfsmart(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+mvnpdfoptimC(x, mean, varcovM, Log = TRUE)
+
+mvnpdfC_LeChat(x, mean, varcovM, Log = TRUE)
 
 mvnpdfsmart_par(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
@@ -37,6 +29,13 @@ mvnpdfsmart_parpb(
   ncpus = 1
 )
 
+mvnpdfsmart_sleepy_par(
+  x,
+  mean = rep(0, nrow(x)),
+  varcovM = diag(nrow(x)),
+  Log = TRUE
+)
+
 mvnpdfsmart_sleepy(
   x,
   mean = rep(0, nrow(x)),
@@ -44,11 +43,14 @@ mvnpdfsmart_sleepy(
   Log = TRUE
 )
 
-mvnpdfsmart_sleepy_par(
+mvnpdfoptim_par(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+
+mvnpdfoptim_parIter(
   x,
   mean = rep(0, nrow(x)),
   varcovM = diag(nrow(x)),
-  Log = TRUE
+  Log = TRUE,
+  ncores = 1
 )
 ```
 
@@ -72,13 +74,13 @@ mvnpdfsmart_sleepy_par(
   logical flag for returning the log of the probability density
   function. Default is `TRUE`.
 
-- ncores:
-
-  number of parallel cores to split task over when using itertools
-
 - ncpus:
 
   number of cores for parallelized pbapply
+
+- ncores:
+
+  number of parallel cores to split task over when using itertools
 
 ## Value
 
@@ -89,10 +91,14 @@ probability density function computed at x
 
 This part gives more details on the function.
 
+the implementation of mvnpdfoptimC based on the implementation from Nino
+Hardt and Dicko Ahmadou http://gallery.rcpp.org/articles/dmvnorm_arma/
+(accessed in August 2014)
+
 ## Examples
 
 ``` r
-mvnpdf(x=matrix(1.96), Log=FALSE)
+mvnpdf(x = matrix(1.96), Log = FALSE)
 #> $x
 #>      [,1]
 #> [1,] 1.96
@@ -105,7 +111,7 @@ mvnpdf(x=matrix(1.96), Log=FALSE)
 dnorm(1.96)
 #> [1] 0.05844094
 
-mvnpdf(x=matrix(rep(1.96, 2), nrow=2, ncol=1), Log=FALSE)
+mvnpdf(x = matrix(rep(1.96, 2), nrow = 2, ncol = 1), Log = FALSE)
 #> $x
 #>      [,1]
 #> [1,] 1.96
