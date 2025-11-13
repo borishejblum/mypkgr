@@ -19,6 +19,6 @@ Nothing is returned, only a plot is given.
 Plot of the mvnpdf function on the first dimension
 }
 \examples{
-pdfvalues <- mvnpdf(x=matrix(seq(-3, 3, by = 0.1), nrow = 1), Log=FALSE)
+pdfvalues <- mvnpdf(x = matrix(seq(-3, 3, by = 0.1), nrow = 1), Log = FALSE)
 plot(pdfvalues)
 }

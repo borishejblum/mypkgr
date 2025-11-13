@@ -1,4 +1,5 @@
 #' @rdname mvnpdf
+#' @order 4
 #' @export
 mvnpdf_invC <- function(x, mean =  rep(0, nrow(x)),
                         varcovM = diag(nrow(x)), Log = TRUE) {
@@ -10,7 +11,7 @@ mvnpdf_invC <- function(x, mean =  rep(0, nrow(x)),
 
   y <- rep(NA, n)
   for (j in 1:n) {
-    yj <- - p/2 * log(2*pi) - 0.5 * LogDetvarcovM -
+    yj <- -p / 2 * log(2 * pi) - 0.5 * LogDetvarcovM -
       0.5 * t(x0[, j]) %*% Rinv %*% x0[, j]
     y[j] <- yj
   }

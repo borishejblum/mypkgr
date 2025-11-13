@@ -1,4 +1,5 @@
 #' @rdname mvnpdf
+#' @order 2
 #' @export
 mvnpdfsmart <- function(x, mean =  rep(0, nrow(x)),
                         varcovM = diag(nrow(x)), Log = TRUE) {

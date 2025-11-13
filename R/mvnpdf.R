@@ -4,12 +4,15 @@
 #'
 #' This part gives more details on the function.
 #'
+#' @name mvnpdf
+#' @order 1
+#'
 #' @param x a p x n data matrix with n the number of observations and
-#'p the number of dimensions
+#' p the number of dimensions
 #' @param mean mean vector
 #' @param varcovM variance-covariance matrix
 #' @param Log logical flag for returning the log of the probability density
-#'function. Default is `TRUE`.
+#' function. Default is `TRUE`.
 #'
 #' @return a list containing the input matrix x and y the multivariate-Normal probability density function
 #' computed at x
@@ -17,10 +20,10 @@
 #' @export
 #'
 #' @examples
-#' mvnpdf(x=matrix(1.96), Log=FALSE)
-#'dnorm(1.96)
+#' mvnpdf(x = matrix(1.96), Log = FALSE)
+#' dnorm(1.96)
 #'
-#'mvnpdf(x=matrix(rep(1.96, 2), nrow=2, ncol=1), Log=FALSE)
+#' mvnpdf(x = matrix(rep(1.96, 2), nrow = 2, ncol = 1), Log = FALSE)
 mvnpdf <- function(x, mean =  rep(0, nrow(x)),
                    varcovM = diag(nrow(x)), Log = TRUE) {
   n <- ncol(x)
@@ -31,7 +34,7 @@ mvnpdf <- function(x, mean =  rep(0, nrow(x)),
 
   y <- NULL
   for (j in 1:n) {
-    yj <- - p/2 * log(2*pi) - 0.5 * LogDetvarcovM -
+    yj <- -p / 2 * log(2 * pi) - 0.5 * LogDetvarcovM -
       0.5 * t(x0[, j]) %*% Rinv %*% x0[, j]
     y <- c(y, yj)
   }
@@ -56,8 +59,8 @@ mvnpdf <- function(x, mean =  rep(0, nrow(x)),
 #' @export
 #' @importFrom graphics plot
 #' @examples
-#' pdfvalues <- mvnpdf(x=matrix(seq(-3, 3, by = 0.1), nrow = 1), Log=FALSE)
+#' pdfvalues <- mvnpdf(x = matrix(seq(-3, 3, by = 0.1), nrow = 1), Log = FALSE)
 #' plot(pdfvalues)
 plot.mvnpdf <- function(x, ...) {
-  graphics::plot(x$x[1, ], x$y, type = "l", ylab="mvnpdf", xlab="Obs (1st dim)", ...)
+  graphics::plot(x$x[1, ], x$y, type = "l", ylab = "mvnpdf", xlab = "Obs (1st dim)", ...)
 }

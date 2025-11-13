@@ -10,11 +10,19 @@ invC <- function(A) {
     .Call(`_mypkgr_invC`, A)
 }
 
-#'Based on the implementation from Nino Hardt and Dicko Ahmadou
-#'http://gallery.rcpp.org/articles/dmvnorm_arma/
-#'(accessed in August 2014)
+#'@rdname mvnpdf
+#'@order 7
+#'@export
+mvnpdfC_LeChat <- function(x, mean, varcovM, Log = TRUE) {
+    .Call(`_mypkgr_mvnpdfC_LeChat`, x, mean, varcovM, Log)
+}
+
+#'@details the implementation of mvnpdfoptimC based on the implementation
+#'from Nino Hardt and Dicko Ahmadou
+#'http://gallery.rcpp.org/articles/dmvnorm_arma/ (accessed in August 2014)
 #'
 #'@rdname mvnpdf
+#'@order 6
 #'@export
 #'
 mvnpdfoptimC <- function(x, mean, varcovM, Log = TRUE) {
@@ -22,6 +30,7 @@ mvnpdfoptimC <- function(x, mean, varcovM, Log = TRUE) {
 }
 
 #'@rdname mvnpdf
+#'@order 5
 #'@export
 mvnpdfsmartC <- function(x, mean, varcovM, Log = TRUE) {
     .Call(`_mypkgr_mvnpdfsmartC`, x, mean, varcovM, Log)

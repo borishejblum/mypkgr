@@ -2,6 +2,7 @@
 using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
 //'@rdname mvnpdf
+//'@order 5
 //'@export
 // [[Rcpp::export]]
 arma::vec mvnpdfsmartC(arma::mat x,
@@ -17,12 +18,13 @@ arma::vec mvnpdfsmartC(arma::mat x,
   vec y(n);
   for (int j=0; j < n; j++){
     colvec x_0 = x.col(j) - mean;
-    vec tempres = -p/2.0 * log(2.0*M_PI) - 0.5 * LogDetvarcovM - 0.5 * x_0.t() * invvarcovM * x_0;
+    vec tempres = -p/2.0 * log(2.0*M_PI) - 0.5 * LogDetvarcovM - 0.5 *
+      x_0.t() * invvarcovM * x_0;
     y(j) =  tempres(0);
   }
 
   if (!Log){
-    y =  exp(y);
+    y = exp(y);
   }
 
   return y;
