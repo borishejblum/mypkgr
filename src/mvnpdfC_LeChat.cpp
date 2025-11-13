@@ -21,8 +21,8 @@ arma::vec mvnpdfC_LeChat(arma::mat x,
   double constant = -p * log2pi2;
 
   for (int i = 0; i < n; i++) {
-
     // Avoid trans() and %: use dot(Rinvsr * x_i, Rinvsr * x_i)
+    // and substract mean in place
     colvec Rinvsr_x_i = Rinvsr * (x.col(i) - mean);
     double quadform = arma::dot(Rinvsr_x_i, Rinvsr_x_i);
     if (!Log) {

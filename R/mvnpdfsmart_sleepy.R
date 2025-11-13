@@ -1,5 +1,6 @@
 #' @rdname mvnpdf
-#' @export @order 12
+#' @order 12
+#' @export
 mvnpdfsmart_sleepy <- function(x, mean =  rep(0, nrow(x)),
                                varcovM = diag(nrow(x)), Log = TRUE) {
   n <- ncol(x)
