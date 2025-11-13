@@ -4,7 +4,7 @@
 \name{mypkgr-package}
 \alias{mypkgr}
 \alias{mypkgr-package}
-\title{mypkgr: Example Of A Package For Teaching HeavyR}
+\title{mypkgr: Example Of A Package For Teaching The EndeavR Course}
 \description{
 A collection of function for computing the density for a multivariate Gaussian distibution. Several implementations are provided to examplify the different techniques for optimizing and accelerating R codes.
 }
