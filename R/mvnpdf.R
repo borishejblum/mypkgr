@@ -9,7 +9,7 @@
 #' @param mean mean vector
 #' @param varcovM variance-covariance matrix
 #' @param Log logical flag for returning the log of the probability density
-#'function. Default is \code{TRUE}.
+#'function. Default is `TRUE`.
 #'
 #' @return a list containing the input matrix x and y the multivariate-Normal probability density function
 #' computed at x
@@ -48,9 +48,9 @@ mvnpdf <- function(x, mean =  rep(0, nrow(x)),
 
 #' Plot of the mvnpdf function on the first dimension
 #'
-#' @param x an object of class \code{mvnpdf} resulting from a call of
-#' \code{mnvpdf()} function.
-#' @param ... graphical parameters passed to \code{plot()} function.
+#' @param x an object of class `mvnpdf` resulting from a call of
+#' `mnvpdf()` function.
+#' @param ... graphical parameters passed to `plot()` function.
 #'
 #' @return Nothing is returned, only a plot is given.
 #' @export
